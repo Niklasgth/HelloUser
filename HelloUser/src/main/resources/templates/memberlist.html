@@ -12,10 +12,13 @@
     <li th:each="member : ${members}">
         Namn: <span th:text="${member.name}"></span><br>
         Ålder: <span th:text="${member.age}"></span><br>
-       Betalade medlem: <span span th:text="${member.isPaying}"></span><br>
+       Betalade medlem: <span span th:text="${member.isPaying ? 'Betald medlemskap' : 'Obetald'}"></span><br>
         <span> </span><br>
     </li>
 </ul>
 
+    <a th:href="@{/}">Hem</a><br>
+    <a th:href="@{/memberlist}">Till medlemssidan</a><br>
+    <a th:href="@{form}">Till formuläret</a><br>
 </body>
 </html>
