@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memberlist</title>
+</head>
+<body>
+    <h1>Föreningens medlemmar</h1>
+
+<ul>
+    <li th:each="member : ${members}">
+        Namn: <span th:text="${member.name}"></span><br>
+        Ålder: <span th:text="${member.age}"></span><br>
+       Betalade medlem: <span span th:text="${member.isPaying}"></span><br>
+        <span> </span><br>
+    </li>
+</ul>
+
+</body>
+</html>
