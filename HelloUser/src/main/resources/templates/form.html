@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="https://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,15 @@
     <h1>Formulär</h1>
 
     <h2>Lägga till ny medlem</h2>
-    Namn<input type="text"><br>
-    Ålder <input type="text"><br>
-    <button>Lägg till ny medlem</button><br>
+
+    <div>
+        <form method="Post" th:action="@{/create-new-member}" th:object="${member}" >
+            <label>Namn:</label> <input type="text" th:field="*{name}"><br>
+            <label>Ålder:</label> <input type="text" th:field="*{age}"><br>
+            <button type="submit">Lägg till ny medlem</button><br>
+
+        </form>
+    </div>
 
     <a th:href="@{/}">Hem</a><br>
     <a th:href="@{/memberlist}">Till medlemssidan</a><br>
