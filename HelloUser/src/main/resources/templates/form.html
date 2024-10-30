@@ -12,7 +12,7 @@
     <h2>Lägga till ny medlem</h2>
 
     <div>
-        <form method="Post" th:action="@{/create-new-member}" th:object="${member}" >
+        <form method="Post" th:action="@{/submitForm}" th:object="${member}" >
             <label>Namn:</label> <input type="text" th:field="*{name}"><br>
             <label>Ålder:</label> <input type="text" th:field="*{age}"><br>
             <button type="submit">Lägg till ny medlem</button><br>
@@ -21,7 +21,7 @@
     </div>
 
     <a th:href="@{/}">Hem</a><br>
-    <a th:href="@{/memberlist}">Till medlemssidan</a><br>
+    <a th:href="@{/members}">Till medlemssidan</a><br>
     <a th:href="@{form}">Till formuläret</a><br>
     </body>
 </html>
