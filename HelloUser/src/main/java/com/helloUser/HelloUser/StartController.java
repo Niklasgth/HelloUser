@@ -21,11 +21,12 @@ public class StartController {
         memberList.add(new Member("Sara", 38));
       }
 
-    @GetMapping("/")
-    public String getStart() {
-        return "start";
-    }
-
+      Login loginInfo = new Login("admin", "admin");
+    
+      @GetMapping("/")
+      public String getStart() {
+          return "start";
+      }
 
     @GetMapping("/form")
     public String showForm(Model model) {
@@ -39,24 +40,41 @@ public class StartController {
     public String addMember(@RequestParam("name") String name, @RequestParam("age") int age){
 
     memberList.add(new Member(name, age));
-    System.out.println("köraddmember");
     return "redirect:/members";
     }
 
     @GetMapping("/members")
     String getMemberList(Model model) {
     model.addAttribute("members", memberList);
-    //model.addAttribute("newMember", new Member(null, 0, false, 0));
     return "members";
-}
-
-@PostMapping("/removeMember")
-public String removeMember(@RequestParam("index") int index) {
-    if (index >= 0 && index < memberList.size()) {
-        memberList.remove(index);
     }
-    return "redirect:/members";
-}
+
+    @PostMapping("/removeMember")
+    public String removeMember(@RequestParam("index") int index) {
+        if (index >= 0 && index < memberList.size()) {
+            memberList.remove(index);
+        }
+        return "redirect:/members";
+    }
+
+    @GetMapping("/memberpublic")
+    String getMemberPublicList(Model model) {
+    model.addAttribute("members", memberList);
+    return "/memberpublic";
+    }
+   
+
+    @GetMapping("/adminlogin")
+    public String getAdminLogin(Model model) {
+        model.addAttribute("loginInfo", loginInfo);
+        return "/adminlogin";
+    }
+    
+    @GetMapping("/adminstart")
+    public String getadminStart() {
+        return "/adminstart";
+    }
+
 }
 
 

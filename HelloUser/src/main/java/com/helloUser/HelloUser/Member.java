@@ -1,6 +1,5 @@
 package com.helloUser.HelloUser;
 
-
 public class Member {
 
 String name;
