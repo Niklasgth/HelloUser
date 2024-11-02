@@ -70,6 +70,15 @@ public class StartController {
         return "/adminlogin";
     }
     
+    @PostMapping("/adminlogin")
+    public String adminLogin(@RequestParam("adminName") String adminName, @RequestParam("password") String password,  Model model) {
+        if (loginInfo.getAdminName().equals(adminName) && loginInfo.getPassword().equals(password)) {
+            return "redirect:/adminstart"; 
+        }
+        model.addAttribute("error", "Fel användarnamn eller lösenord");
+        return "adminlogin";  
+    }
+
     @GetMapping("/adminstart")
     public String getadminStart() {
         return "/adminstart";
