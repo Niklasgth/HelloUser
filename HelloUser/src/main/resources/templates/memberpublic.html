@@ -8,22 +8,18 @@
 <body>
     <h1>Föreningens medlemmar</h1>
 
+
     <ul>
         <li th:each="member, weird : ${members}">
             Namn: <span th:text="${member.name}"></span><br>
             Ålder: <span th:text="${member.age}"></span><br>
-            <div>
-                <form th:action="@{/removeMember}" method="post">
-                    <input type="hidden" th:name="index" th:value="${weird.index}" >
-                    <button type="submit">Ta bort</button>
-                </form>
-            </div>
+
             <span> </span><br>
         </li>
     </ul>
 
+
     <a th:href="@{/}">Hem</a><br>
-    <a th:href="@{/members}">Till medlemssidan</a><br>
-    <a th:href="@{form}">Till formuläret</a><br>
+    <a th:href="@{/memberpublic}">Till medlemssidan</a><br>
 </body>
 </html>

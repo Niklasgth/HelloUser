@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Adminsida för föreningen Kneeslap</h1>
+
+    Välkommen till adminsidan <br>
+    Du har nu adminbehörighet <br>
+    <br>
+    <a th:href="@{/adminstart}">Adminstratörens startsida</a><br>
+    <a th:href="@{/members}">Till medlemssidan med adminbehörighet</a><br>
+    <a th:href="@{/form}">Till formuläret för hantera medlemmar</a><br>
+
+</body>
+</html>
