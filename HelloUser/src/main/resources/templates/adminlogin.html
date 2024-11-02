@@ -8,12 +8,19 @@
 <body>
     <h1>Logga in som admin</h1>
 
-    <label for="input">Skriv användernamn</label>
-    <input type="text">
-    <label for="input">Skriv lösenord</label>
-    <input type="text">
-    <button type="submit">Logga in</button>
+    <form action="/adminlogin" method="post">
+        <label for="adminName">Användernamn: </label>
+        <input type="text" id="adminName" name="adminName">
+        <br>
+        <label for="input">Lösenord</label>
+        <input type="text" id="password" name="password" required>
+        <br>
+        <button type="submit">Logga in</button>
+    </form>
 
+    <div th:if="${error}">
+        <p th:text="${error}"></p>
+    </div>
 
 </body>
 </html>
