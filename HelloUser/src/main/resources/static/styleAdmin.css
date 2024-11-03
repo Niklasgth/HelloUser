@@ -1,0 +1,40 @@
+body{
+    background-color: grey;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+}
+header {
+    background: grey;
+    color: black;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: darkslategray;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background: brown;
+}
+
+button{
+    background-color: black;
+    color: white;
+    border-color: gold;
+}
+
+input{
+    background-color: black;
+    color: white;
+    border-color: gold; 
+}

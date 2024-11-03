@@ -8,13 +8,18 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Välkommen till föreningen "Kneeslap"</h1>
+    <header>
+        <nav>
+            <a th:href="@{/}">Hem</a><br>
+            <a th:href="@{/memberpublic}">Till medlemssidan</a><br>
+            <a th:href="@{/adminlogin}">Logga in som Admin</a>
+        </nav>
+    </header>
 
+    <h1>Välkommen till föreningen "Kneeslap"</h1>
     <h2>Vilka är vi?</h2>
     <p>Vi är världens coolaste dansförening "Swing out you cats!"</p>
 
-    <a th:href="@{/}">Hem</a><br>
-    <a th:href="@{/memberpublic}">Till medlemssidan</a><br>
-    <a th:href="@{/adminlogin}">Logga in som Admin</a>
+
 </body>
 </html>
