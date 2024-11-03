@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>adminstart</title>
+    <link rel="stylesheet" href="/styleAdmin.css">
 </head>
 <body>
+
+    <header>
+        <nav>
+        <a th:href="@{/adminstart}">Adminstratörens startsida</a><br>
+        <a th:href="@{/members}">Till medlemssidan med adminbehörighet</a><br>
+        <a th:href="@{/form}">Till formuläret för hantera medlemmar</a><br>
+
+        <a th:href="@{/}">Logga ut som administratör</a>
+    </nav>
+    </header>
+
     <h1>Adminsida för föreningen Kneeslap</h1>
 
-    Välkommen till adminsidan <br>
-    Du har nu adminbehörighet <br>
+    <h2>Välkommen till adminsidan </h2> <br>
+    <p>Du har nu adminbehörighet </p><br>
     <br>
-    <a th:href="@{/adminstart}">Adminstratörens startsida</a><br>
-    <a th:href="@{/members}">Till medlemssidan med adminbehörighet</a><br>
-    <a th:href="@{/form}">Till formuläret för hantera medlemmar</a><br>
-    <br>
-    <a th:href="@{/}">Logga ut som administratör</a>
+
+
 
 </body>
 </html>

@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memberlist</title>
+    <link rel="stylesheet" href="/styleAdmin.css">
 </head>
 <body>
+
+    <header>
+        <nav>
+        <a th:href="@{/adminstart}">Adminstratörens startsida</a><br>
+        <a th:href="@{/members}">Till medlemssidan med adminbehörighet</a><br>
+        <a th:href="@{/form}">Till formuläret för hantera medlemmar</a><br>
+
+        <a th:href="@{/}">Logga ut som administratör</a>
+    </nav>
+    </header>
+
     <h1>Föreningens medlemmar</h1>
 
     <ul>
@@ -22,11 +34,7 @@
         </li>
     </ul>
 
-    <a th:href="@{/adminstart}">Adminstratörens startsida</a><br>
-    <a th:href="@{/members}">Till medlemssidan med adminbehörighet</a><br>
-    <a th:href="@{/form}">Till formuläret för hantera medlemmar</a><br>
-    <br>
-    <a th:href="@{/}">Logga ut som administratör</a>
+
 
 </body>
 </html>

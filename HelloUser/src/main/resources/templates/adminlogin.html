@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
+    <header>
+        <nav>
+            <a th:href="@{/}">Hem</a><br>
+            <a th:href="@{/memberpublic}">Till medlemssidan</a><br>
+
+        </nav>
+    </header>
+
     <h1>Logga in som admin</h1>
 
     <form action="/adminlogin" method="post">
-        <label for="adminName">Användernamn: </label>
+        <label for="adminName">Användarnamn: </label>
         <input type="text" id="adminName" name="adminName">
-        <br>
+
         <label for="input">Lösenord</label>
         <input type="text" id="password" name="password" required>
-        <br>
+
         <button type="submit">Logga in</button>
     </form>
 
     <div th:if="${error}">
         <p th:text="${error}"></p>
     </div>
+    <br>
 
 </body>
 </html>

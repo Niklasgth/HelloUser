@@ -2,4 +2,34 @@ body{
     background-color: gold;
     color: darkgreen;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+}
+header {
+    background: darkgreen;
+    color: gold;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: darkgreen;
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background: brown;
+}
+
+button{
+    background-color: green;
+    color: gold;
+    border-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

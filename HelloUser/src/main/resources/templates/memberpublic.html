@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memberlist</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <a th:href="@{/}">Hem</a><br>
+            <a th:href="@{/memberpublic}">Till medlemssidan</a><br>
+            <a th:href="@{/adminlogin}">Logga in som Admin</a>
+        </nav>
+    </header>
+
     <h1>Föreningens medlemmar</h1>
 
 
@@ -19,7 +28,6 @@
     </ul>
 
 
-    <a th:href="@{/}">Hem</a><br>
-    <a th:href="@{/memberpublic}">Till medlemssidan</a><br>
+
 </body>
 </html>
