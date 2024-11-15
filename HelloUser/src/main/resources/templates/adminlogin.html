@@ -12,26 +12,25 @@
         <nav>
             <a th:href="@{/}">Hem</a><br>
             <a th:href="@{/memberpublic}">Till medlemssidan</a><br>
-
         </nav>
     </header>
 
     <h1>Logga in som admin</h1>
 
-    <form action="/adminlogin" method="post">
+    <form id="loginForm">
         <label for="adminName">Användarnamn: </label>
-        <input type="text" id="adminName" name="adminName">
+        <input type="text" id="adminName" required>
 
-        <label for="input">Lösenord</label>
-        <input type="text" id="password" name="password" required>
+        <label for="password">Lösenord: </label>
+        <input type="password" id="password" required>
 
         <button type="submit">Logga in</button>
     </form>
 
-    <div th:if="${error}">
-        <p th:text="${error}"></p>
-    </div>
+    <div id="error-message"></div>
     <br>
 
+    <!--Många svordommar innan jag lyckades lista ut scriptfilen behöver vara strax innan body slutar för fungera rätt.-->
+    <script th:src="@{/script.js}"></script>
 </body>
 </html>

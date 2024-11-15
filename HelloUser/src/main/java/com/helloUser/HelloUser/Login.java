@@ -1,4 +1,6 @@
-package com.helloUser.HelloUser;
+
+//Denna klasss är utkommenterad pga den ej behövs för local storage
+/*package com.helloUser.HelloUser;
 
 public class Login {
 
@@ -21,3 +23,4 @@ public String getAdminName() {
 } 
 
 }
+*/
