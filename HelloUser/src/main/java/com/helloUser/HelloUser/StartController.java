@@ -21,8 +21,6 @@ public class StartController {
         memberList.add(new Member("Sara", 38));
       }
 
-      Login loginInfo = new Login("admin", "admin");
-    
       @GetMapping("/")
       public String getStart() {
           return "start";
@@ -31,14 +29,12 @@ public class StartController {
     @GetMapping("/form")
     public String showForm(Model model) {
         model.addAttribute("member", new Member(null, 0));
-        System.out.println(model+"Printar model");
         return "form";
     }
 
 
     @PostMapping("/submitForm")
     public String addMember(@RequestParam("name") String name, @RequestParam("age") int age){
-
     memberList.add(new Member(name, age));
     return "redirect:/members";
     }
@@ -63,25 +59,17 @@ public class StartController {
     return "/memberpublic";
     }
    
-
     @GetMapping("/adminlogin")
-    public String getAdminLogin(Model model) {
-        model.addAttribute("loginInfo", loginInfo);
-        return "/adminlogin";
-    }
+    public String getAdminLogin() {
+        
+        return "adminlogin";  }
+
     
-    @PostMapping("/adminlogin")
-    public String adminLogin(@RequestParam("adminName") String adminName, @RequestParam("password") String password,  Model model) {
-        if (loginInfo.getAdminName().equals(adminName) && loginInfo.getPassword().equals(password)) {
-            return "redirect:/adminstart"; 
-        }
-        model.addAttribute("error", "Fel användarnamn eller lösenord");
-        return "adminlogin";  
-    }
+
 
     @GetMapping("/adminstart")
     public String getadminStart() {
-        return "/adminstart";
+        return "adminstart";
     }
 
 }

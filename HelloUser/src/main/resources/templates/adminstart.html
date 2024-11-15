@@ -14,7 +14,7 @@
         <a th:href="@{/members}">Till medlemssidan med adminbehörighet</a><br>
         <a th:href="@{/form}">Till formuläret för hantera medlemmar</a><br>
 
-        <a th:href="@{/}">Logga ut som administratör</a>
+        <a href="javascript:void(0)" onclick="logout()">Logga ut</a>
     </nav>
     </header>
 
@@ -24,7 +24,24 @@
     <p>Du har nu adminbehörighet </p><br>
     <br>
 
+    <script>
+        // Läste att det är bra att börja en login med kolla om personen redan är inloggad. Ergo en if sats. 
+        if (localStorage.getItem('isAdminLoggedIn') !== 'true') {
+            
+            // tydligen gör .replace att man inte kan gå tillbaka hursomhelst
+            window.location.replace = '/adminlogin';
+        }
+    </script>
 
 
+<script>
+    //logutfunktion
+    function logout() {
+        localStorage.removeItem('isAdminLoggedIn');
+        window.location.href = '/adminlogin';
+    }
+</script>
+
+<script th:src="@{/script.js}"></script>
 </body>
 </html>
