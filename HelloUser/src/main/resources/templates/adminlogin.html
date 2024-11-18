@@ -15,20 +15,24 @@
         </nav>
     </header>
 
-    <h1>Logga in som admin</h1>
+    <div class="wrapper">
+        <h1>Logga in som admin</h1>
 
-    <form id="loginForm">
-        <label for="adminName">Användarnamn: </label>
-        <input type="text" id="adminName" required>
+        <form id="loginForm">
+            <label for="adminName">Användarnamn: </label>
+            <input type="text" id="adminName" required>
 
-        <label for="password">Lösenord: </label>
-        <input type="password" id="password" required>
+            <label for="password">Lösenord: </label>
+            <input type="password" id="password" required>
 
-        <button type="submit">Logga in</button>
-    </form>
+            <button type="submit">Logga in</button>
+        </form>
 
-    <div id="error-message"></div>
-    <br>
+        <div id="error-message"></div>
+        <br>
+
+
+    </div>
 
     <!--Många svordommar innan jag lyckades lista ut scriptfilen behöver vara strax innan body slutar för fungera rätt.-->
     <script th:src="@{/script.js}"></script>
