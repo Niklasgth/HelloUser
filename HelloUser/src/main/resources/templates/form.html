@@ -19,10 +19,9 @@
     </nav>
     </header>
 
+<div class="wrapper">
     <h1>Formulär</h1>
-
     <h2>Lägga till ny medlem</h2>
-
     <div>
         <form method="Post" th:action="@{/submitForm}" th:object="${member}" >
             <label>Namn:</label> <input type="text" th:field="*{name}"><br>
@@ -32,6 +31,7 @@
         </form>
     </div>
 <br>
+</div>
 
 
     </body>

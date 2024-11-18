@@ -15,19 +15,17 @@
         </nav>
     </header>
 
+<div class="wrapper">
     <h1>Föreningens medlemmar</h1>
-
-
     <ul>
-        <li th:each="member, weird : ${members}">
-            Namn: <span th:text="${member.name}"></span><br>
-            Ålder: <span th:text="${member.age}"></span><br>
+    <li th:each="member, weird : ${members}">
+        Namn: <span th:text="${member.name}"></span><br>
+        Ålder: <span th:text="${member.age}"></span><br>
 
-            <span> </span><br>
-        </li>
-    </ul>
-
-
+        <span> </span><br>
+    </li>
+</ul>
+</div>
 
 </body>
 </html>
